@@ -1,6 +1,6 @@
 import React from 'react';
 import JamBody from './components/JamBody'
-import './App.css';
+import './styles/App.css';
 
 function App() {
   return (

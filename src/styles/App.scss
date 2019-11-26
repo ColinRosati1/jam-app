@@ -1,0 +1,15 @@
+@mixin flex-center($f-direction, $j-content, $a-items) {
+    display: flex;
+    justify-content: $j-content;
+    flex-direction: $f-direction;
+    align-items: $a-items;
+}
+
+.App {
+    @media (min-width: 800px) {
+        @include flex-center(column, center, center);
+        padding: 0.5em;
+        font-size: 2em;
+        font-family: "arial", sans-serif;
+    }
+}
