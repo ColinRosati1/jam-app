@@ -2,10 +2,10 @@
 .jam-item-wrapper {
     @media (min-width: 800px) {
         @include flex-center(column, center, center);
-        width: 100%;
+        width: 90%;
         height: 200px;
-        padding: 0.5em;
-        margin: 0.2em;
+        padding: 1.5em;
+        margin: 0.5em;
         font-size: 0.4em;
         background-color: #E2FADB;
     }
@@ -21,4 +21,8 @@
 
 .jam-item-text {
     @include flex-center(column, center, center);
+}
+
+.item-song {
+    width: 100%;
 }

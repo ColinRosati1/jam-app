@@ -8,6 +8,7 @@ const JamItem = (props) => {
   const artist_name = props.items.artist_name;
   const pic_url = props.items.cover_image_path;
   const song_url = props.items.music_file_path;
+  const likes = props.items.likes;
   return (
     <div>
         <div className="jam-item-wrapper">
@@ -17,14 +18,13 @@ const JamItem = (props) => {
                 <div className="jam-item-song">{song}</div>
             </div>
             <div className="jam-item-pic"><img src={pic_url} width={"150px"}></img></div>
+            <div className="jam-likes">{likes}❤️</div>
         </div>
-            
-            <div className="jam-item-song">
-           
-                <div className="jam-item-song-path">
-                <audio controls src={song_url} controls />
-                </div>
+        <div className="jam-item-song">
+            <div className="jam-item-song-path">
+            <audio controls src={song_url} controls />
             </div>
+        </div>
         </div>
 
     </div>
