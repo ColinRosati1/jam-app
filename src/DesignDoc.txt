@@ -1,0 +1,59 @@
+DESIGN DOC
+----------------------
+Design document for JAM code challenge 
+
+Overview
+----------------------
+Display songs from JAM api with like & comment rows
+
+Task 
+----------------------
+build a page which is connected to some of JAM public APIs that are
+showing:
+ List of songs (paginated) with thumb nail and play/pause button
+ Each row should have 2 options which are to like a song and to comment a song
+ Each request should return success or failure status
+The end points are:
+get list of songs: https://api-stg.jam-community.com/song/trending
+like a song: https://api-stg.jam-community.com/interact/like?
+apikey=___agAFTxkmMIWsmN9zOpM_6l2SkZPPy21LGRlxhYD8
+(method is post and you should send us `id` of a song which the sample id is 00042cf4-2ce4-11e6-
+bd70-0661aaff07f9)
+comment a song: https://api-stg.jam-community.com/interact/like?
+apikey=___agAFTxkmMIWsmN9zOpM_6l2SkZPPy21LGRlxhYD8
+(method is post and you should send us `id` of a song which the sample id is 00042cf4-2ce4-11e6-
+bd70-0661aaff07f9 also `type` which is song and message which will be your comment)
+
+
+Context
+----------------------
+React, Jest, responsive
+
+
+Proposed Solution
+----------------------
+On Body load populate trending songs API. Each result is styled into feed. Play/pause button exist as states.
+Create comment and like as seperate components with API calls.  
+
+
+The strengths of this solution:
+----------------------
+
+
+weakness of solution:
+----------------------
+
+
+
+TODOS
+----------------------
+
+
+Steps to Run
+----------------------
+1. Clone this repository
+2. npm install
+3. npm start
+
+
+
