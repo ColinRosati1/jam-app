@@ -1,4 +1,5 @@
 import React from 'react';
+import SongLike from './SongLike'
 import '../styles/jam-items.css'
 
 // unique API items
@@ -18,7 +19,8 @@ const JamItem = (props) => {
                 <div className="jam-item-song">{song}</div>
             </div>
             <div className="jam-item-pic"><img src={pic_url} width={"150px"}></img></div>
-            <div className="jam-likes">{likes}❤️</div>
+            {/* <div className="jam-likes">{likes}❤️</div> */}
+            <SongLike id={props}/>
         </div>
         <div className="jam-item-song">
             <div className="jam-item-song-path">
