@@ -28,7 +28,7 @@ class JamFeed extends React.Component {
             <div>
                 <div className="jam-feed-wrapper">
                     {items.map(res => {
-                        return <JamItem key={res.id} items={res} />  // map each result into its own unique component
+                        return <JamItem key={res.id} items={res}/>  // map each result into its own unique component
                     })}
                 </div>
             </div>

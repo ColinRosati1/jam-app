@@ -1,0 +1,12 @@
+@import 'mixins.scss';
+.jam-item {
+    @media (min-width: 800px) {
+        @include flex-center(column, center, center);
+        width: 80%;
+        height: 200px;
+        padding: 0.5em;
+        margin: 0.2em;
+        font-size: 0.4em;
+        background-color: #E2FADB;
+    }
+}
