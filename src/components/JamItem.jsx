@@ -1,9 +1,11 @@
 import React from 'react';
 
-function JamItem() {
+const JamItem = (props) => {
+  const songs = props.items;
+  const artist_name = props.items.artist_name
   return (
     <div className="jam-header">
-      JAM Music
+      {artist_name}
     </div>
   );
 }

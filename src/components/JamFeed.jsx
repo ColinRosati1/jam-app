@@ -13,11 +13,11 @@ class JamFeed extends React.Component {
 
         fetch(url)
         .then( async (response) => response.json())
-        .then(json => {
-            console.log(json);
-        })
         .then( async results => { 
             await this.setState({results}) 
+        })
+        .then(() => {
+            console.log(this.state.results);
         })
         .catch( err => console.log("error with user fetch data"))
         
@@ -25,10 +25,12 @@ class JamFeed extends React.Component {
     render(){ // handle API data here. render each array object into DOM elements
         let items = this.state.results; // grab state data
         return(
-            <div className="jam-feed-wrapper">
-                {items.map(res => {
-                    return(<JamItem items={items}/>)
-                })}
+            <div>
+                <div className="jam-feed-wrapper">
+                    {items.map(res => {
+                        return <JamItem key={res.id} items={res} />  // map each result into its own unique component
+                    })}
+                </div>
             </div>
             
         )
