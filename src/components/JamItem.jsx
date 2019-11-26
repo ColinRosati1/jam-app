@@ -12,7 +12,7 @@ const JamItem = (props) => {
     <div className="jam-item">
         <div className="jam-item-artist">{artist_name}</div>
         <div className="jam-item-song">{song}</div>
-        <div className="jam-item-pic">{pic_url}</div>
+        <div className="jam-item-pic"><img src={pic_url} width={"250px"}></img></div>
         <div className="jam-item-song-path">{song_url}</div>
     </div>
   );
