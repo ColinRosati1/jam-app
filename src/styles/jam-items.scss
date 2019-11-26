@@ -1,12 +1,24 @@
 @import 'mixins.scss';
-.jam-item {
+.jam-item-wrapper {
     @media (min-width: 800px) {
         @include flex-center(column, center, center);
-        width: 80%;
+        width: 100%;
         height: 200px;
         padding: 0.5em;
         margin: 0.2em;
         font-size: 0.4em;
         background-color: #E2FADB;
     }
+}
+
+.jam-item {
+    @media (min-width: 800px) {
+        @include flex-center(row, space-around, center);
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.jam-item-text {
+    @include flex-center(column, center, center);
 }

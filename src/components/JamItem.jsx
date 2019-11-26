@@ -9,11 +9,24 @@ const JamItem = (props) => {
   const pic_url = props.items.cover_image_path;
   const song_url = props.items.music_file_path;
   return (
-    <div className="jam-item">
-        <div className="jam-item-artist">{artist_name}</div>
-        <div className="jam-item-song">{song}</div>
-        <div className="jam-item-pic"><img src={pic_url} width={"250px"}></img></div>
-        <div className="jam-item-song-path">{song_url}</div>
+    <div>
+        <div className="jam-item-wrapper">
+        <div className="jam-item">
+            <div className="jam-item-text">
+                <div className="jam-item-artist">{artist_name}</div>
+                <div className="jam-item-song">{song}</div>
+            </div>
+            <div className="jam-item-pic"><img src={pic_url} width={"150px"}></img></div>
+        </div>
+            
+            <div className="jam-item-song">
+           
+                <div className="jam-item-song-path">
+                <audio controls src={song_url} controls />
+                </div>
+            </div>
+        </div>
+
     </div>
   );
 }

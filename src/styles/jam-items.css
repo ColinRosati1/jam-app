@@ -1,5 +1,5 @@
 @media (min-width: 800px) {
-  .jam-item {
+  .jam-item-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -13,12 +13,47 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 80%;
+    width: 100%;
     height: 200px;
     padding: 0.5em;
     margin: 0.2em;
     font-size: 0.4em;
     background-color: #E2FADB;
   }
+}
+
+@media (min-width: 800px) {
+  .jam-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.jam-item-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=jam-items.css.map */
