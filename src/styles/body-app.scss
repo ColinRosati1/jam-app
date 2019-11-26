@@ -1,6 +1,7 @@
 .body-app {
     @media (min-width: 800px) {
         @include flex-center(column, center, center);
+        text-align: center;
         width: 90%;
         padding: 0.5em;
         font-size: 2em;
