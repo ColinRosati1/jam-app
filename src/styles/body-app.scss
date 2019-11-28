@@ -1,3 +1,8 @@
+@import 'mixins.scss';
+body {
+    background-color: #000;
+}
+
 .body-app {
     @media (min-width: 800px) {
         @include flex-center(column, center, center);
@@ -5,7 +10,8 @@
         width: 90%;
         padding: 0.5em;
         font-size: 2em;
-        font-family: "courier", sans-serif;
-        background-color: #CFEBDF;
+        // font-family: "courier", sans-serif;
+        background-color: #000;
+        color: #fff;
     }
 }

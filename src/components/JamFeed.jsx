@@ -17,7 +17,7 @@ class JamFeed extends React.Component {
             await this.setState({results}) 
         })
         .then(() => {
-            console.log(this.state.results);
+            // console.log(this.state.results);
         })
         .catch( err => console.log("error with user fetch data"))
         

@@ -2,18 +2,21 @@
 .jam-item-wrapper {
     @media (min-width: 800px) {
         @include flex-center(column, center, center);
-        width: 90%;
-        height: 200px;
-        padding: 1.5em;
-        margin: 0.5em;
+        width: 60vw;
+        height: 100%;
+        padding: 1.5em 3.5em 5.5em;
         font-size: 0.4em;
-        background-color: #E2FADB;
+        border: 2px solid #E2FADB;
+        transition: all 2s;
+        &:hover {
+            background-color: #6290C8;
+            transition: all 1s;
+        }
     }
 }
 
 .jam-item {
     @media (min-width: 800px) {
-        @include flex-center(row, space-around, center);
         width: 100%;
         height: 200px;
     }
@@ -21,8 +24,44 @@
 
 .jam-item-text {
     @include flex-center(column, center, center);
+    &.jam-item-text>div {
+        padding: 10px;
+    }
 }
 
 .item-song {
     width: 100%;
+}
+
+.jam-item-pic-src {
+    padding-top: 15%;
+    width: 350px;
+}
+
+.jam-likes {
+    text-align: right;
+    padding-bottom: 35px;
+}
+
+.jam-feed-like {
+    text-align: right;
+    padding-bottom: 35px;
+}
+
+.jam-item-artist {
+    font-size: 1.4em;
+}
+
+.jam-item-song {
+    font-size: 0.6em;
+}
+
+.comment-form-wrapper {
+    padding: 1%;
+    background: #383838;
+}
+
+.comment-form-input {
+    width: 90%;
+    height: 25px;
 }
