@@ -1,5 +1,7 @@
 # Jam app
 
+![alt text](https://github.com/ColinRosati1/jam-app/blob/master/jam-screenshot.JPG)
+
 ## Overview
 Display songs from two JAM api enpdpoints. with like & comment POST functions
 
