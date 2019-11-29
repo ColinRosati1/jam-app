@@ -84,11 +84,15 @@
 
 .comment-form-wrapper {
   padding: 1%;
-  background: #383838;
 }
 
 .comment-form-input {
   width: 90%;
+  height: 25px;
+}
+
+.form > :first-child {
+  margin: 1em;
   height: 25px;
 }
 /*# sourceMappingURL=jam-items.css.map */

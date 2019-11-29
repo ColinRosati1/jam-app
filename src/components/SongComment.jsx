@@ -11,7 +11,7 @@ class SongComment extends React.Component {
     }
 
     componentDidMount(){
-        document.querySelector('.comment-form-input').addEventListener("enter", this.commentItr)
+        document.querySelector('.form').addEventListener("submit", this.commentItr) // add form submit event
     }
     
     //TODO fix this
@@ -20,7 +20,7 @@ class SongComment extends React.Component {
         console.log("comment")
         const url = "https://api-stg.jam-community.com/interact/like?"; 
         // const url = "https://api-stg.jam-community.com/interact/like?"+this.props.id.items.id; 
-        // const id = this.props.id.items.artist.id;
+        const id = this.props.id.items.artist.id;
 
         var obj = {
             method: 'POST',
@@ -28,7 +28,7 @@ class SongComment extends React.Component {
               "Access-Control-Allow-Headers": "Accept",
              },
             body: JSON.stringify({
-                'id': 'id'
+                'id': id
               })
              
         }
@@ -42,16 +42,22 @@ class SongComment extends React.Component {
         .then(() => {
             console.log(this.state.results);
         })
-        .catch( err => console.log("error with user fetch data"))
+        .catch( err => {
+            console.log("Failure")
+            this.setState('Failure')
+        })
         
     }
-    render(){ // handle API data here. render each array object into DOM elements
+    render(){ // handle API data here.
         let comment = this.props.id.items.comments; // grab like from props
         return(
             <div>
                 <div className="jam-feed-comment">
                 <div className="comment-form-wrapper">
-                        <input type="text" title="Write a comment" placeholder="Write a comment"  className="comment-form-input"></input>
+                    <form className="form">
+                        <input type="texts" title="Write a comment" placeholder="Write a comment"  className="comment-form-input"></input>
+                        <button type="submit"  className="comment-form-button">enter</button>
+                    </form>
                     </div>
                 Comments {comment}
               
