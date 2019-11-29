@@ -7,7 +7,9 @@ import '../styles/jam-items.css'
 class SongComment extends React.Component {
     constructor(props){
         super(props)
-        this.state = {results: []};
+        this.state = {results: [],
+            failure: false
+        };
     }
 
     componentDidMount(){
@@ -43,8 +45,7 @@ class SongComment extends React.Component {
             console.log(this.state.results);
         })
         .catch( err => {
-            console.log("Failure")
-            this.setState('Failure')
+            return {failure:true} // return failure state true
         })
         
     }
