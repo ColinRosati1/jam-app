@@ -1,3 +1,19 @@
+.jam-item-wrapper {
+  padding: 1.5em 3.5em 5.5em;
+  font-size: 0.4em;
+  border: 2px solid #E2FADB;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+@media (min-width: 370px) {
+  .jam-item-wrapper {
+    margin: 2em;
+    width: 80vw;
+    height: 100%;
+  }
+}
+
 @media (min-width: 800px) {
   .jam-item-wrapper {
     display: -webkit-box;
@@ -15,17 +31,13 @@
             align-items: center;
     width: 60vw;
     height: 100%;
-    padding: 1.5em 3.5em 5.5em;
-    font-size: 0.4em;
-    border: 2px solid #E2FADB;
-    -webkit-transition: all 2s;
-    transition: all 2s;
   }
-  .jam-item-wrapper:hover {
-    background-color: #6290C8;
-    -webkit-transition: all 1s;
-    transition: all 1s;
-  }
+}
+
+.jam-item-wrapper:hover {
+  background-color: #6290C8;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 @media (min-width: 800px) {
@@ -64,6 +76,13 @@
   width: 350px;
 }
 
+@media (max-width: 570px) {
+  .jam-item-pic-src {
+    width: 250px;
+    padding: 10%;
+  }
+}
+
 .jam-likes {
   text-align: right;
   padding-bottom: 35px;
@@ -72,6 +91,7 @@
 .jam-feed-like {
   text-align: right;
   padding-bottom: 35px;
+  font-size: 1em;
 }
 
 .jam-item-artist {
@@ -91,8 +111,14 @@
   height: 25px;
 }
 
-.form > :first-child {
-  margin: 1em;
+.form > :last-child {
+  margin-top: 1em;
   height: 25px;
+}
+
+@media (min-width: 370px) {
+  .comment-form-button {
+    margin-left: 1%;
+  }
 }
 /*# sourceMappingURL=jam-items.css.map */

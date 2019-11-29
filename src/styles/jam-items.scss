@@ -1,21 +1,30 @@
 @import 'mixins.scss';
 .jam-item-wrapper {
+    @media (min-width: 370px) {
+        margin: 2em;
+        width: 80vw;
+        height: 100%;
+    }
     @media (min-width: 800px) {
         @include flex-center(column, center, center);
         width: 60vw;
         height: 100%;
-        padding: 1.5em 3.5em 5.5em;
-        font-size: 0.4em;
-        border: 2px solid #E2FADB;
-        transition: all 2s;
-        &:hover {
-            background-color: #6290C8;
-            transition: all 1s;
-        }
+    }
+    padding: 1.5em 3.5em 5.5em;
+    font-size: 0.4em;
+    border: 2px solid #E2FADB;
+    transition: all 2s;
+    &:hover {
+        background-color: #6290C8;
+        transition: all 1s;
     }
 }
 
 .jam-item {
+    @media (min-width: 370px) {
+        // width: 90%;
+        // height: 100%;
+    }
     @media (min-width: 800px) {
         width: 100%;
         height: 200px;
@@ -34,6 +43,10 @@
 }
 
 .jam-item-pic-src {
+    @media (max-width: 570px) {
+        width: 250px;
+        padding: 10%;
+    }
     padding-top: 15%;
     width: 350px;
 }
@@ -46,6 +59,7 @@
 .jam-feed-like {
     text-align: right;
     padding-bottom: 35px;
+    font-size: 1em;
 }
 
 .jam-item-artist {
@@ -66,7 +80,15 @@
     height: 25px;
 }
 
-.form> :first-child {
-    margin: 1em;
+.form> :last-child {
+    margin-top: 1em;
     height: 25px;
+    // padding: 1%;
+}
+
+.comment-form-button {
+    @media (min-width: 370px) {
+        margin-left: 1%;
+    }
+    // margin-left: 5%;
 }
